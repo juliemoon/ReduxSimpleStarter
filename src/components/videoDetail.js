@@ -2,11 +2,13 @@ import React from 'react';
 
 // argument: pulling video property off of video object being passed from App
 const VideoDetail = ({video}) => {
+  // const video = props.video ; refering to the video property 
   if(!video){
     return <div>LOADING...</div>;
   }
   const videoId = video.id.videoId;
   const url = `https://www.youtube.com/embed/${videoId}`;
+  
   return (
     <div className="video-detail col-md-8">
       <div className="embed-responsive embed-responsive-16by9">
